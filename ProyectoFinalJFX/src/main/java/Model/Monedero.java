@@ -1,10 +1,11 @@
 package Model;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Monedero {
     protected String idMonedero;
     protected double saldo;
-    protected ArrayList<Transaccion> historialTransacciones;
+    protected List<Transaccion> historialTransacciones;
 
     public Monedero(String idMonedero, double saldo) {
         this.idMonedero = idMonedero;
@@ -28,11 +29,11 @@ public class Monedero {
         this.saldo = saldo;
     }
 
-    public ArrayList<Transaccion> getHistorialTransacciones() {
+    public List<Transaccion> getHistorialTransacciones() {
         return historialTransacciones;
     }
 
-    public void setHistorialTransacciones(ArrayList<Transaccion> historialTransacciones) {
+    public void setHistorialTransacciones(List<Transaccion> historialTransacciones) {
         this.historialTransacciones = historialTransacciones;
     }
 }

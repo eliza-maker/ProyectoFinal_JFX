@@ -1,5 +1,6 @@
 package Model;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Cliente {
     protected String idCliente;
@@ -7,7 +8,7 @@ public class Cliente {
     protected String email;
     protected int puntosTotales;
     protected RangoCliente rango;
-    protected ArrayList<Monedero> listaMonederos;
+    protected List<Monedero> listaMonederos;
 
     public Cliente(String idCliente, String nombre, String email, int puntosTotales, RangoCliente rango) {
         this.idCliente = idCliente;
@@ -59,11 +60,11 @@ public class Cliente {
         this.rango = rango;
     }
 
-    public ArrayList<Monedero> getListaMonederos() {
+    public List<Monedero> getListaMonederos() {
         return listaMonederos;
     }
 
-    public void setListaMonederos(ArrayList<Monedero> listaMonederos) {
+    public void setListaMonederos(List<Monedero> listaMonederos) {
         this.listaMonederos = listaMonederos;
     }
 }
