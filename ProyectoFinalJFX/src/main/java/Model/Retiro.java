@@ -1,4 +1,5 @@
 package Model;
 
-public class Retiro {
+public class Retiro extends Transaccion{
+
 }

@@ -1,4 +1,4 @@
 package Model;
 
-public class NotificacionEmail {
+public class NotificacionEmail implements Notificable{
 }

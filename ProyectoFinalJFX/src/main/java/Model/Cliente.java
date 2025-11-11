@@ -67,4 +67,18 @@ public class Cliente {
     public void setListaMonederos(List<Monedero> listaMonederos) {
         this.listaMonederos = listaMonederos;
     }
+
+
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "idCliente='" + idCliente + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", email='" + email + '\'' +
+                ", puntosTotales=" + puntosTotales +
+                ", rango=" + rango +
+                ", listaMonederos=" + listaMonederos +
+                '}';
+    }
 }

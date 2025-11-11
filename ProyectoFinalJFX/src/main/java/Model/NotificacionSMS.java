@@ -1,4 +1,4 @@
 package Model;
 
-public class NotificacionSMS {
+public class NotificacionSMS implements Notificable{
 }

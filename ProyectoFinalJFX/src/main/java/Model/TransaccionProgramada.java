@@ -1,4 +1,4 @@
 package Model;
 
-public class TransaccionProgramada {
+public class TransaccionProgramada extends Transaccion{
 }

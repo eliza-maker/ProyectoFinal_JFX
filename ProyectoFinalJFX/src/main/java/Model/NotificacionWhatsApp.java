@@ -1,4 +1,6 @@
 package Model;
 
-public class NotificacionWhatsApp {
+public class NotificacionWhatsApp implements Notificable{
+
+
 }

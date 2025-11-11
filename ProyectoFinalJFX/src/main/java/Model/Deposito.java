@@ -1,4 +1,4 @@
 package Model;
 
-public class Deposito {
+public class Deposito extends Transaccion{
 }

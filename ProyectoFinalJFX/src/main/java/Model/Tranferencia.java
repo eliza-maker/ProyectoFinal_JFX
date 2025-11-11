@@ -1,4 +1,4 @@
 package Model;
 
-public class Tranferencia {
+public class Tranferencia extends Transaccion{
 }

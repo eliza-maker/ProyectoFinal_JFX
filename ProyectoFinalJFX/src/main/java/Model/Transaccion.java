@@ -1,4 +1,4 @@
 package Model;
 
-public class Transaccion {
+public abstract class Transaccion {
 }
