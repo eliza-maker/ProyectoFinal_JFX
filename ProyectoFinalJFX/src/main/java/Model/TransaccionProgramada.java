@@ -27,4 +27,3 @@ package Model;
             this.recurrente = recurrente;
         }
     }
-    
