@@ -27,4 +27,12 @@ public class SistemaPuntos {
     public void setHistorialPuntos(List<String> historialPuntos) {
         this.historialPuntos = historialPuntos;
     }
+
+    @Override
+    public String toString() {
+        return "SistemaPuntos{" +
+                "reglasPuntos=" + reglasPuntos +
+                ", historialPuntos=" + historialPuntos +
+                '}';
+    }
 }
