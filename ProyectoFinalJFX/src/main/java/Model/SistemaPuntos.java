@@ -28,6 +28,10 @@ public class SistemaPuntos {
         this.historialPuntos = historialPuntos;
     }
 
+
+
+
+
     @Override
     public String toString() {
         return "SistemaPuntos{" +
