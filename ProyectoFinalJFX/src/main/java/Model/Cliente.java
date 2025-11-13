@@ -8,14 +8,17 @@ public class Cliente {
     protected String email;
     protected int puntosTotales;
     protected RangoCliente rango;
+    protected SistemaPuntos sistemaPuntos;
     protected List<Monedero> listaMonederos;
 
-    public Cliente(String idCliente, String nombre, String email, int puntosTotales, RangoCliente rango) {
+
+    public Cliente(String idCliente, String nombre, String email, int puntosTotales, RangoCliente rango, SistemaPuntos sistemaPuntos) {
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.email = email;
         this.puntosTotales = puntosTotales;
         this.rango = rango;
+        this.sistemaPuntos=sistemaPuntos;
         this.listaMonederos = new ArrayList<>();
 
     }
@@ -60,6 +63,14 @@ public class Cliente {
         this.rango = rango;
     }
 
+    public SistemaPuntos getSistemaPuntos() {
+        return sistemaPuntos;
+    }
+
+    public void setSistemaPuntos(SistemaPuntos sistemaPuntos) {
+        this.sistemaPuntos = sistemaPuntos;
+    }
+
     public List<Monedero> getListaMonederos() {
         return listaMonederos;
     }
@@ -69,16 +80,33 @@ public class Cliente {
     }
 
 
-
-    @Override
-    public String toString() {
-        return "Cliente{" +
-                "idCliente='" + idCliente + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", email='" + email + '\'' +
-                ", puntosTotales=" + puntosTotales +
-                ", rango=" + rango +
-                ", listaMonederos=" + listaMonederos +
-                '}';
+    public void agregarMonedero(Monedero monedero) {
+        listaMonederos.add(monedero);
     }
+
+    public void realizarTransaccion(Transaccion transaccion) {
+        transaccion.ejecutar();
+        int puntosGanados = transaccion.calcularPuntos();
+        sistemaPuntos.acumularPuntos(this, puntosGanados);
+    }
+
+    public double consultarSaldoTotal() {
+        double total = 0;
+        for (Monedero c : listaMonederos) {
+            total += c.getSaldo();
+        }
+        return total;
+    }
+
+    public void consultarHistorial() {
+        for (Monedero c : listaMonederos) {
+            c.mostrarHistorial();
+        }
+    }
+
+    public void canjearPuntos(Beneficio beneficio) {
+        sistemaPuntos.canjearPuntos(this, beneficio);
+    }
+
+
 }
