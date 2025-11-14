@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                co.edu.uniquindio.co.poo.proyectofinaljfx/co.edu.uniquindio.co.poo.proyectofinaljfx.HelloApplication
+                                co.edu.uniquindio.co.poo.proyectofinaljfx/co.edu.uniquindio.co.poo.proyectofinaljfx.MonederoAplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

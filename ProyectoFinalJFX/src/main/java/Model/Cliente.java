@@ -77,10 +77,10 @@ public class Cliente {
 
     public void setListaMonederos(List<Monedero> listaMonederos) {
         this.listaMonederos = listaMonederos;
-    }
+    }}
 
 
-    public void agregarMonedero(Monedero monedero) {
+    /* public void agregarMonedero(Monedero monedero) {
         listaMonederos.add(monedero);
     }
 
@@ -110,3 +110,4 @@ public class Cliente {
 
 
 }
+*/
