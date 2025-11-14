@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6e26480-f4cc-411d-adbf-e73bf89b262a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/AnalizadorGastos.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/AnalizadorGastos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/NotificacionWhatsApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/NotificacionWhatsApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Tranferencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Tranferencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/MonederoAplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/Launcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/Controller/DashboardUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/Controller/DashboardUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/MonederoAplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/MonederoAplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

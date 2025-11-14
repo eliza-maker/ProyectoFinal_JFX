@@ -31,8 +31,8 @@ public class DashboardUserController {
     }
 
     @FXML
-    void onChangeTransferir(ActionEvent event) {
-
+    void onChangeTransferir(ActionEvent event) throws IOException {
+        MonederoAplication.changeScene("Transferir-view.fxml");
     }
 
 }
