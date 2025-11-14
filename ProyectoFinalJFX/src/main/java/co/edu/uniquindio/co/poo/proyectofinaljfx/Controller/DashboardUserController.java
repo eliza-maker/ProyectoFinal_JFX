@@ -21,8 +21,8 @@ public class DashboardUserController {
     private Button BtnTransferir;
 
     @FXML
-    void onChangeDepositar(ActionEvent event) {
-
+    void onChangeDepositar(ActionEvent event) throws IOException {
+        MonederoAplication.changeScene("depositar-view.fxml");
     }
 
     @FXML

@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6e26480-f4cc-411d-adbf-e73bf89b262a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/Controller/DashboardUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/Controller/DashboardUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/MonederoAplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/MonederoAplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/depositar-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/depositar-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
