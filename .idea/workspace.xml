@@ -6,7 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c6e26480-f4cc-411d-adbf-e73bf89b262a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/RangoCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/RangoCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Notificable.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Notificable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Notificacion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/NotificacionEmail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/NotificacionSMS.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/NotificacionSMS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/NotificacionWhatsApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/Controller/DashboardUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/Controller/DashboardUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/MonederoAplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/MonederoAplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/DashboardUser_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/DashboardUser_View.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,9 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -49,23 +58,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.MonederoAplication.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev__Isa",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/cesar/Documentos/GitHub/ProyectoFinal_JFX",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.MonederoAplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev__Isa&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/cesar/Documentos/GitHub/ProyectoFinal_JFX&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c6e26480-f4cc-411d-adbf-e73bf89b262a" name="Changes" comment="" />

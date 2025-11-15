@@ -21,6 +21,9 @@ public class DashboardUserController {
     private Button BtnTransferir;
 
     @FXML
+    private Button BtnSMS;
+
+    @FXML
     void onChangeDepositar(ActionEvent event) throws IOException {
         MonederoAplication.changeScene("depositar-view.fxml");
     }
@@ -35,4 +38,22 @@ public class DashboardUserController {
         MonederoAplication.changeScene("Transferir-view.fxml");
     }
 
+    @FXML
+    void onNotificar(){
+        enviarNotificacion();
+    }
+
+    public void enviarNotificacion() {
+        try {
+            String respuesta = MonederoAplication.notificacion.enviarSms(
+                    "573011281692",
+                    "Tu transacción se realizó correctamente"
+            );
+
+            System.out.println("Respuesta Infobip: " + respuesta);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
