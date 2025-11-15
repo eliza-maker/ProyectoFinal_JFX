@@ -1,14 +1,17 @@
 package Model;
+    import java.time.Period;
     import java.util.Date;
 
-    public class TransaccionProgramada extends Transaccion {
+    public abstract class TransaccionProgramada {
         private Date fechaEjecucion;
-        private boolean recurrente;
+        private double monto;
+        private Period frecuencia;
 
-        public TransaccionProgramada(String idTransaccion, double monto, Date fecha, String tipo, Date fechaEjecucion, boolean recurrente) {
-            super(idTransaccion, fecha, monto, tipo);
+
+        public TransaccionProgramada(double monto, Date fechaEjecucion, Period frecuencia) {
             this.fechaEjecucion = fechaEjecucion;
-            this.recurrente = recurrente;
+            this.monto = monto;
+            this.frecuencia = frecuencia;
         }
 
         public Date getFechaEjecucion() {
@@ -19,11 +22,23 @@ package Model;
             this.fechaEjecucion = fechaEjecucion;
         }
 
-        public boolean getRecurrente() {
-            return recurrente;
+        public double getMonto() {
+            return monto;
         }
 
-        public void setRecurrente(boolean recurrente) {
-            this.recurrente = recurrente;
+        public void setMonto(double monto) {
+            this.monto = monto;
         }
+
+        public Period getFrecuencia() {
+            return frecuencia;
+        }
+
+        public void setFrecuencia(Period frecuencia) {
+            this.frecuencia = frecuencia;
+        }
+
+        //Metodo para ejecutar transferencia o deposito
+
+        public abstract void ejecutar(Cuenta cuenta);
     }
