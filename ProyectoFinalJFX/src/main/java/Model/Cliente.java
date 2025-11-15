@@ -10,9 +10,10 @@ public class Cliente {
     protected RangoCliente rango;
     protected SistemaPuntos sistemaPuntos;
     protected List<Monedero> listaMonederos;
+    protected Notificable notificador;
 
 
-    public Cliente(String idCliente, String nombre, String email, int puntosTotales, RangoCliente rango, SistemaPuntos sistemaPuntos) {
+    public Cliente(String idCliente, String nombre, String email,RangoCliente rango) {
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.email = email;
@@ -20,6 +21,7 @@ public class Cliente {
         this.rango = rango;
         this.sistemaPuntos=sistemaPuntos;
         this.listaMonederos = new ArrayList<>();
+        this.notificador = notificador;
 
     }
 
@@ -55,6 +57,10 @@ public class Cliente {
         this.puntosTotales = puntosTotales;
     }
 
+    public Notificable getNotificador() {return notificador;}
+
+    public void setNotificador(Notificable notificador) {this.notificador = notificador;}
+
     public RangoCliente getRango() {
         return rango;
     }
@@ -78,6 +84,8 @@ public class Cliente {
     public void setListaMonederos(List<Monedero> listaMonederos) {
         this.listaMonederos = listaMonederos;
     }}
+
+
 
 
     /* public void agregarMonedero(Monedero monedero) {
