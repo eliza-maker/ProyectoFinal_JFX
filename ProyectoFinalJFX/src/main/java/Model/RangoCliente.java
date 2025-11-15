@@ -4,7 +4,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public enum RangoCliente {
-    BRONCE(Arrays.asList(
+
+    BRONCE, PLATA, ORO, PLATINO;
+
+    /*BRONCE(Arrays.asList(
             new Beneficio(1, "Sin beneficios", 0, 0)
     )),
     PLATA(Arrays.asList(
@@ -33,4 +36,6 @@ public enum RangoCliente {
         else if (puntos <= 5000) return ORO;
         else return PLATINO;
     }
+
+     */
 }
