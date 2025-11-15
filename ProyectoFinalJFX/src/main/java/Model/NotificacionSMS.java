@@ -1,23 +1,46 @@
 package Model;
 
-public class NotificacionSMS extends Notificacion {
-    protected String numeroRemitente;
+import okhttp3.*;
 
-    public NotificacionSMS(String remitente, String plantillaMensaje, String numeroRemitente) {
-        super(remitente, plantillaMensaje);
-        this.numeroRemitente = numeroRemitente;
+public class NotificacionSMS {
+
+    private final OkHttpClient client;
+    private final String apiKey;
+    private final String baseUrl;
+
+    public NotificacionSMS(String baseUrl, String apiKey) {
+        this.client = new OkHttpClient();
+        this.apiKey = apiKey;
+        this.baseUrl = baseUrl;
     }
 
-    public String getNumeroRemitente() {
-        return numeroRemitente;
-    }
+    public String enviarSms(String numero, String mensaje) throws Exception {
 
-    public void setNumeroRemitente(String numeroRemitente) {
-        this.numeroRemitente = numeroRemitente;
-    }
+        String json = "{\n" +
+                "  \"messages\": [\n" +
+                "    {\n" +
+                "      \"from\": \"InfoSMS\",\n" +
+                "      \"destinations\": [ { \"to\": \"" + numero + "\" } ],\n" +
+                "      \"text\": \"" + mensaje + "\"\n" +
+                "    }\n" +
+                "  ]\n" +
+                "}";
 
-    @Override
-    public void enviar(String mensaje, Cliente cliente) {
+        RequestBody body = RequestBody.create(
+                json,
+                MediaType.parse("application/json")
+        );
 
+        Request request = new Request.Builder()
+                .url(baseUrl + "/sms/2/text/advanced")
+                .post(body)
+                .addHeader("Authorization", "App " + apiKey)
+                .addHeader("Content-Type", "application/json")
+                .addHeader("Accept", "application/json")
+                .build();
+
+        try (Response response = client.newCall(request).execute()) {
+            return response.body().string();
+        }
     }
 }
