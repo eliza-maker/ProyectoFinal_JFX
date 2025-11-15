@@ -2,7 +2,7 @@ package Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Monedero {
+public abstract class Monedero {
     protected String idMonedero;
     protected double saldo;
     protected List<Transaccion> historialTransacciones;
@@ -36,4 +36,6 @@ public class Monedero {
     public void setHistorialTransacciones(List<Transaccion> historialTransacciones) {
         this.historialTransacciones = historialTransacciones;
     }
+
+
 }
