@@ -1,16 +1,36 @@
 package co.edu.uniquindio.co.poo.proyectofinaljfx;
 
+import Model.Cliente;
 import Model.NotificacionSMS;
+import Model.RangoCliente;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.LinkedList;
+import java.util.List;
 
 public class MonederoAplication extends Application {
     private static Stage primaryStage;
+    public static List<Cliente> listaClientes = new LinkedList<>();
     public static NotificacionSMS notificacion;
+
+    public static List<Cliente> getListaClientes() {
+        return listaClientes;
+    }
+
+    public static void setListaClientes(List<Cliente> listaClientes) {
+        MonederoAplication.listaClientes = listaClientes;
+    }
+
+    public MonederoAplication() {
+        this.listaClientes = getListaClientes();
+    }
+
+    Cliente c = new Cliente("1", "Isa","isa@gmail.com", RangoCliente.BRONCE, 20000);
+
     @Override
     public void start(Stage stage) throws IOException {
         primaryStage = stage;

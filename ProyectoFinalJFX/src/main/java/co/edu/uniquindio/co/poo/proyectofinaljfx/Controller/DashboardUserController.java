@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
 import java.io.IOException;
 
@@ -22,6 +23,28 @@ public class DashboardUserController {
 
     @FXML
     private Button BtnSMS;
+
+    @FXML
+    private Label TxtSaldo;
+
+    @FXML
+    private Label TxtRango;
+
+    @FXML
+    private Button BtnIformacionCuenta;
+
+    @FXML
+    private Button BtnHistorial;
+
+    @FXML
+    void onChangeCuenta(ActionEvent event) throws IOException{
+        MonederoAplication.changeScene("informacionCuenta-view.fxml");
+    }
+
+    @FXML
+    void onChangeHistorial(ActionEvent event) throws IOException{
+        MonederoAplication.changeScene("historial-view.fxml");
+    }
 
     @FXML
     void onChangeDepositar(ActionEvent event) throws IOException {
@@ -41,6 +64,15 @@ public class DashboardUserController {
     @FXML
     void onNotificar(){
         enviarNotificacion();
+    }
+
+    @FXML
+    void initialize(){
+        cambiarSaldo();
+    }
+
+    void cambiarSaldo(){
+        TxtSaldo.setText(1000 + "");
     }
 
     public void enviarNotificacion() {
