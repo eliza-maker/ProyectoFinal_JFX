@@ -11,9 +11,10 @@ public class Cliente {
     protected SistemaPuntos sistemaPuntos;
     protected List<Monedero> listaMonederos;
     protected Notificable notificador;
+    protected double saldo;
 
 
-    public Cliente(String idCliente, String nombre, String email,RangoCliente rango) {
+    public Cliente(String idCliente, String nombre, String email,RangoCliente rango, double saldo) {
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.email = email;
@@ -22,7 +23,7 @@ public class Cliente {
         this.sistemaPuntos=sistemaPuntos;
         this.listaMonederos = new ArrayList<>();
         this.notificador = notificador;
-
+        this.saldo = saldo;
     }
 
     public String getIdCliente() {
