@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="co.edu.uniquindio.co.poo.proyectofinaljfx.Controller.BeneficiosController"
+            prefWidth="600" prefHeight="400">
+
+    <children>
+
+        <VBox spacing="15" layoutX="80" layoutY="40" prefWidth="440">
+            <children>
+
+                <Label text="Canje de Beneficios"
+                       style="-fx-font-size: 26px; -fx-font-weight: bold;" />
+
+                <!-- Selección del beneficio -->
+                <HBox spacing="10">
+                    <children>
+                        <Label text="Beneficio:" style="-fx-font-size: 16px;" />
+                        <ComboBox fx:id="comboBeneficios"
+                                  promptText="Seleccione un beneficio"
+                                  prefWidth="250">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Mes sin recargos"/>
+                                    <String fx:value="Bono de saldo $50"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                    </children>
+                </HBox>
+
+                <!-- Costo en puntos -->
+                <HBox spacing="10">
+                    <children>
+                        <Label text="Costo en puntos:" style="-fx-font-size: 16px;" />
+                        <Label fx:id="lblCostoPuntos"
+                               text="---"
+                               style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+                    </children>
+                </HBox>
+
+                <!-- Descripción -->
+                <Label text="Descripción:" style="-fx-font-size: 16px;" />
+
+                <TextArea fx:id="txtDescripcion"
+                          prefHeight="120"
+                          wrapText="true"
+                          editable="false" />
+
+                <!-- Botón de canje -->
+                <Button text="Canjear Beneficio"
+                        fx:id="btnCanjear"
+                        prefWidth="200"
+                        style="-fx-font-size: 18px; -fx-background-color: #0084ff; -fx-text-fill: white; -fx-background-radius: 8px;"
+                        onAction="#onCanjear"/>
+
+                <!-- 🔙 Botón para volver -->
+                <Button text="Volver"
+                        fx:id="btnVolver"
+                        prefWidth="120"
+                        style="-fx-font-size: 16px; -fx-background-color: #aaaaaa; -fx-text-fill: white; -fx-background-radius: 8px;"
+                        onAction="#onVolver"/>
+
+            </children>
+
+            <padding>
+                <Insets top="20" left="20" right="20" bottom="20"/>
+            </padding>
+        </VBox>
+
+    </children>
+
+</AnchorPane>

@@ -31,6 +31,9 @@ public class DashboardUserController {
     private Label TxtRango;
 
     @FXML
+    private Label TxtPuntos;
+
+    @FXML
     private Label TxtNombreUsuario;
 
     @FXML
@@ -42,11 +45,6 @@ public class DashboardUserController {
     @FXML
     void onChangeCuenta(ActionEvent event) throws IOException{
         MonederoAplication.changeScene("informacionCuenta-view.fxml");
-    }
-
-    @FXML
-    void onChangeHistorial(ActionEvent event) throws IOException{
-        MonederoAplication.changeScene("historial-view.fxml");
     }
 
     @FXML
@@ -70,6 +68,16 @@ public class DashboardUserController {
     }
 
     @FXML
+    void onHistorial()throws IOException{
+        MonederoAplication.changeScene("historial-view.fxml");
+    }
+
+    @FXML
+    void onBeneficios() throws IOException{
+        MonederoAplication.changeScene("Beneficios-view.fxml");
+    }
+
+    @FXML
     void onCerrarSesion() throws  IOException {
         MonederoAplication.setCliente(null);
         MonederoAplication.openLogin();
@@ -83,6 +91,7 @@ public class DashboardUserController {
     void cambiarSaldo(){
         TxtSaldo.setText(MonederoAplication.getCliente().getSaldo()+"");
         TxtRango.setText(MonederoAplication.getCliente().getRango()+"");
+        TxtPuntos.setText(MonederoAplication.getCliente().getPuntosTotales()+"");
         TxtNombreUsuario.setText(MonederoAplication.getCliente().getNombre());
     }
 

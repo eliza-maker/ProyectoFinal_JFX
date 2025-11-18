@@ -21,11 +21,12 @@ public class MonederoAplication extends Application {
         cargarDatos();
         primaryStage = stage;
 
-        /*
+
         notificacion = new NotificacionSMS(
                 "https://e5vdjr.api.infobip.com",
                 "1588d65acee321bcfd1068194c53a220-319cb1f1-2af5-49be-ad35-69f3d23cb98f"
-        );*/
+        );
+
         openLogin();
     }
 
@@ -55,8 +56,8 @@ public class MonederoAplication extends Application {
 
     public void cargarDatos(){
         this.empresa = new Empresa("Bancolombia");
-        Cliente c = new Cliente("1", "Isa","isa@gmail.com", RangoCliente.BRONCE, 20000,"123");
-        Cliente c2 = new Cliente("2", "Eliza","Eliza@gmail.com", RangoCliente.BRONCE, 10000,"123");
+        Cliente c = new Cliente("1", "Isa","isa@gmail.com", RangoCliente.BRONCE, 50000,"123");
+        Cliente c2 = new Cliente("2", "Eliza","Eliza@gmail.com", RangoCliente.BRONCE, 20000,"123");
         Cuenta cuenta1 = new Cuenta("1010",c);
         Cuenta cuenta2 = new Cuenta("2020",c2);
         empresa.agregarCliente(c);
