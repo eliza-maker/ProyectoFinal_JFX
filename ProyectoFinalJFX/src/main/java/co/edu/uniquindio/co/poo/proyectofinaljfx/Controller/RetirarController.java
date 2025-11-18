@@ -6,13 +6,11 @@ import Model.Retiro;
 import Model.Transaccion;
 import co.edu.uniquindio.co.poo.proyectofinaljfx.MonederoAplication;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Optional;
 import java.util.Random;
 import java.util.UUID;
 
@@ -31,6 +29,8 @@ public class RetirarController {
         String metodo = comboMetodo.getValue();
         try {
             double monto = Double.parseDouble(texto);
+            int puntos = (int)(monto/100)*2;
+            Cliente cliente = MonederoAplication.getCliente();
 
             if (monto > MonederoAplication.getCliente().getSaldo()){
 
@@ -42,10 +42,32 @@ public class RetirarController {
                 return;
             }
 
+            if (!cliente.getBeneficio()){
+                Alert alerta2 = new Alert(Alert.AlertType.CONFIRMATION);
+                alerta2.setTitle("Confirmar Retiro");
+                alerta2.setHeaderText("¿Desea realizar el retiro?");
+                alerta2.setContentText("Desea realizar el retiro por $"+monto+" con un cargo de $200");
+
+
+                ButtonType btnSi2 = new ButtonType("Sí");
+                ButtonType btnNo2 = new ButtonType("No");
+
+                alerta2.getButtonTypes().setAll(btnSi2, btnNo2);
+
+                Optional<ButtonType> resultado2 = alerta2.showAndWait();
+
+                if (resultado2.isPresent() && resultado2.get() == btnSi2) {
+                    cliente.setSaldo(cliente.getSaldo()-200);
+                }else{
+                    return;
+                }
+            }
+
             Transaccion retiro = new Retiro(UUID.randomUUID().toString(),monto, LocalDate.now(),metodo,true,MonederoAplication.getCliente());
             MonederoAplication.empresa.agregarTransaccion(retiro);
-            Cliente cliente = MonederoAplication.getCliente();
+
             cliente.setSaldo(cliente.getSaldo()-monto);
+            cliente.setPuntosTotales(cliente.getPuntosTotales()+puntos);
             MonederoAplication.empresa.actualizarCliente(cliente);
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -66,7 +88,6 @@ public class RetirarController {
 
         }
     }
-
 
     @FXML
     void onVolver() throws IOException {

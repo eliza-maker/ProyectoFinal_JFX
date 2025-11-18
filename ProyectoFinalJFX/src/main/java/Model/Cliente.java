@@ -10,6 +10,7 @@ public class Cliente {
     private RangoCliente rango;
     private double saldo;
     private String contrasena;
+    private boolean beneficio;
 
     public Cliente(String idCliente, String nombre, String email,RangoCliente rango, double saldo, String contrasena) {
         this.idCliente = idCliente;
@@ -19,6 +20,7 @@ public class Cliente {
         this.rango = rango;
         this.saldo = saldo;
         this.contrasena = contrasena;
+        this.beneficio=false;
     }
 
     public String getIdCliente() {
@@ -51,6 +53,19 @@ public class Cliente {
 
     public void setPuntosTotales(int puntosTotales) {
         this.puntosTotales = puntosTotales;
+        calcularPuntosTotales();
+    }
+
+    public void calcularPuntosTotales(){
+        if (this.puntosTotales > 500 && this.puntosTotales < 1000) {
+            setRango(RangoCliente.PLATA);
+        }else if (this.puntosTotales > 1000 && this.puntosTotales < 5000) {
+            setRango(RangoCliente.ORO);
+        }else if (this.puntosTotales > 5000) {
+            setRango(RangoCliente.PLATINO);
+        }else{
+            setRango(RangoCliente.BRONCE);
+        }
     }
 
     public RangoCliente getRango() {
@@ -75,6 +90,14 @@ public class Cliente {
 
     public void setSaldo(double saldo) {
         this.saldo = saldo;
+    }
+
+    public boolean getBeneficio() {
+        return beneficio;
+    }
+
+    public void setBeneficio(boolean beneficio) {
+        this.beneficio = beneficio;
     }
 
     @Override
