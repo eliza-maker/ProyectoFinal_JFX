@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="co.edu.uniquindio.co.poo.proyectofinaljfx.Controller.DashboardUserController"
-            prefHeight="400.0" prefWidth="600.0">
+<VBox xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.co.poo.proyectofinaljfx.Controller.HistorialController"
+      spacing="20"
+      style="-fx-padding:20; -fx-background-color:#f5f6fa;">
 
-</AnchorPane>
+    <children>
+
+        <!-- Título -->
+        <Label text="Historial de Transacciones"
+               style="-fx-font-size:22px; -fx-font-weight:bold;" />
+        <Button fx:id="BtnCerrarSesion"
+                text="Volver"
+                onAction="#onCerrarSesion"
+                style="-fx-background-color:#e74c3c; -fx-text-fill:white;"
+                prefHeight="28" />
+
+        <!-- Tabla de Transacciones -->
+        <TableView fx:id="tablaHistorial" prefHeight="400">
+
+            <columns>
+
+                <!-- Tipo: Retiro / Depósito / Transferencia -->
+                <TableColumn fx:id="colTipo" text="Tipo" prefWidth="150" />
+
+                <!-- Monto -->
+                <TableColumn fx:id="colMonto" text="Monto" prefWidth="120" />
+
+                <!-- Fecha -->
+                <TableColumn fx:id="colFecha" text="Fecha" prefWidth="150" />
+
+                <!-- Detalle -->
+                <TableColumn fx:id="colDetalle" text="Detalle" prefWidth="250" />
+
+            </columns>
+
+        </TableView>
+
+    </children>
+
+</VBox>

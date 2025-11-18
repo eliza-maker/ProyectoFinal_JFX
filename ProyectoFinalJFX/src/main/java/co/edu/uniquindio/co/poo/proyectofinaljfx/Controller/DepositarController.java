@@ -42,11 +42,14 @@ public class DepositarController {
             Optional<ButtonType> resultado = alerta.showAndWait();
 
             if (resultado.isPresent() && resultado.get() == btnSi) {
+
+                int puntos = (int) (monto / 100);
                 Cliente cliente = MonederoAplication.getCliente();
                 Transaccion deposito = new Deposito(UUID.randomUUID().toString(),monto, LocalDate.now(),metodo,0,"123",cliente);
 
                 MonederoAplication.empresa.agregarTransaccion(deposito);
                 cliente.setSaldo(cliente.getSaldo()+monto);
+                cliente.setPuntosTotales(cliente.getPuntosTotales()+puntos);
 
                 MonederoAplication.empresa.actualizarCliente(cliente);
 
