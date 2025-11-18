@@ -1,21 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.*?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<BorderPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="co.edu.uniquindio.co.poo.proyectofinaljfx.Controller.DashboardUserController"
+            prefWidth="800" prefHeight="500">
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.co.poo.proyectofinaljfx.Controller.DashboardUserController">
-   <children>
-      <Button fx:id="BtnRetirar" layoutX="37.0" layoutY="51.0" mnemonicParsing="false" onAction="#onChangeRetirar" text="Retirar" />
-      <Button fx:id="BtnDepositar" layoutX="37.0" layoutY="101.0" mnemonicParsing="false" onAction="#onChangeDepositar" text="Depositar" />
-      <Button fx:id="BtnTransferir" layoutX="37.0" layoutY="154.0" mnemonicParsing="false" onAction="#onChangeTransferir" text="Transferir" />
-      <Button fx:id="BtnSMS" layoutX="37.0" layoutY="210.0" mnemonicParsing="false" onAction="#onNotificar" text="SMS" />
-      <Button layoutX="37.0" layoutY="267.0" mnemonicParsing="false" text="Informacion Cuenta" />
-      <Button layoutX="37.0" layoutY="327.0" mnemonicParsing="false" text="Historial" />
-      <Label layoutX="247.0" layoutY="68.0" text="Monedero Virtual" />
-      <Label layoutX="166.0" layoutY="127.0" text="Saldo: " />
-      <Label fx:id="TxtSaldo" layoutX="216.0" layoutY="127.0" text="0" />
-      <Label layoutX="166.0" layoutY="158.0" text="Rango:" />
-      <Label fx:id="TxtRango" layoutX="216.0" layoutY="158.0" text="Bronce" />
-   </children>
-</AnchorPane>
+    <!-- Panel Izquierdo (Menú) -->
+    <left>
+        <VBox spacing="15" style="-fx-padding:20; -fx-background-color:#f5f6fa;" prefWidth="200">
+            <children>
+                <Label text="Opciones" style="-fx-font-size:16px; -fx-font-weight:bold;" />
+
+                <Button fx:id="BtnRetirar" text="Retirar" onAction="#onChangeRetirar" prefHeight="35" />
+                <Button fx:id="BtnDepositar" text="Depositar" onAction="#onChangeDepositar" prefHeight="35" />
+                <Button fx:id="BtnTransferir" text="Transferir" onAction="#onChangeTransferir" prefHeight="35" />
+                <Button fx:id="BtnSMS" text="SMS" onAction="#onNotificar" prefHeight="35" />
+                <Button fx:id="BtnInfo" text="Información Cuenta" prefHeight="35" />
+                <Button fx:id="BtnHistorial" text="Historial" prefHeight="35" />
+
+                <Region VBox.vgrow="ALWAYS" />
+            </children>
+        </VBox>
+    </left>
+
+    <!-- Parte Superior -->
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding:15; -fx-background-color:#dfe6f0;" >
+            <children>
+
+                <Label text="Monedero Virtual" style="-fx-font-size:22px; -fx-font-weight:bold;" />
+
+                <Region HBox.hgrow="ALWAYS" />
+
+                <HBox spacing="15" alignment="CENTER_RIGHT">
+                    <children>
+
+                        <Label text="Usuario:" style="-fx-font-size:16px;" />
+                        <Label fx:id="TxtNombreUsuario"
+                               text="Nombre Usuario"
+                               style="-fx-font-size:16px; -fx-font-weight:bold;" />
+
+                        <!-- BOTÓN PARA CERRAR SESIÓN -->
+                        <Button fx:id="BtnCerrarSesion"
+                                text="Cerrar Sesión"
+                                onAction="#onCerrarSesion"
+                                style="-fx-background-color:#e74c3c; -fx-text-fill:white;"
+                                prefHeight="28" />
+
+                    </children>
+                </HBox>
+
+            </children>
+        </HBox>
+    </top>
+
+    <!-- Panel Central -->
+    <center>
+        <VBox spacing="20" alignment="TOP_LEFT" style="-fx-padding:30;">
+            <children>
+
+                <Label text="Información de la Cuenta" style="-fx-font-size:18px; -fx-font-weight:bold;" />
+
+                <HBox spacing="10">
+                    <children>
+                        <Label text="Saldo:" style="-fx-font-size:16px;" />
+                        <Label fx:id="TxtSaldo" text="0" style="-fx-font-size:16px; -fx-font-weight:bold;" />
+                    </children>
+                </HBox>
+
+                <HBox spacing="10">
+                    <children>
+                        <Label text="Rango:" style="-fx-font-size:16px;" />
+                        <Label fx:id="TxtRango" style="-fx-font-size:16px; -fx-font-weight:bold;" />
+                    </children>
+                </HBox>
+
+                <Separator />
+
+                <Label text="Seleccione una opción del menú para continuar." style="-fx-text-fill:#666;" />
+
+            </children>
+        </VBox>
+    </center>
+
+</BorderPane>

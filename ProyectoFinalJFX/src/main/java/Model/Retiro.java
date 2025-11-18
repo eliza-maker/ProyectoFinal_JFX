@@ -1,16 +1,15 @@
 package Model;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.util.UUID;
 
-    public class Retiro extends Transaccion {
+public class Retiro extends Transaccion {
         private String metodoRetiro;
-        private double comision;
         private boolean autorizacion;
 
-        public Retiro(String idTransaccion, double monto, Date fecha, String tipo, String metodoRetiro, double comision, boolean autorizacion) {
-            super(idTransaccion, fecha, monto, tipo);
+        public Retiro(String idTransaccion, double monto, LocalDate fecha, String metodoRetiro, boolean autorizacion, Cliente usuario) {
+            super(idTransaccion, fecha, monto, usuario);
             this.metodoRetiro = metodoRetiro;
-            this.comision = comision;
             this.autorizacion = autorizacion;
         }
 
@@ -20,14 +19,6 @@ import java.util.Date;
 
         public void setMetodoRetiro(String metodoRetiro) {
             this.metodoRetiro = metodoRetiro;
-        }
-
-        public double getComision() {
-            return comision;
-        }
-
-        public void setComision(double comision) {
-            this.comision = comision;
         }
 
         public boolean getAutorizacion() {

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="20" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.co.poo.proyectofinaljfx.Controller.LoginController"
+      prefWidth="400" prefHeight="300" style="-fx-padding:30; -fx-background-color:#f5f6fa;">
+
+    <children>
+        <Label text="Inicio de Sesión" style="-fx-font-size:22px; -fx-font-weight:bold;" />
+
+        <VBox spacing="10" prefWidth="250">
+            <children>
+                <Label text="Documento" />
+                <TextField fx:id="txtDocumento" promptText="Ingrese su documento" />
+
+                <Label text="Contraseña" />
+                <PasswordField fx:id="txtContrasena" promptText="Ingrese su contraseña" />
+            </children>
+        </VBox>
+
+        <Button fx:id="btnLogin" text="Ingresar" prefWidth="150" style="-fx-background-color:#4a90e2; -fx-text-fill:white;"
+                onAction="#onLogin" />
+
+        <Label fx:id="lblError" textFill="red" />
+    </children>
+
+</VBox>

@@ -3,27 +3,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente {
-    protected String idCliente;
-    protected String nombre;
-    protected String email;
-    protected int puntosTotales;
-    protected RangoCliente rango;
-    protected SistemaPuntos sistemaPuntos;
-    protected List<Monedero> listaMonederos;
-    protected Notificable notificador;
-    protected double saldo;
+    private String idCliente;
+    private String nombre;
+    private String email;
+    private int puntosTotales;
+    private RangoCliente rango;
+    private double saldo;
+    private String contrasena;
 
-
-    public Cliente(String idCliente, String nombre, String email,RangoCliente rango, double saldo) {
+    public Cliente(String idCliente, String nombre, String email,RangoCliente rango, double saldo, String contrasena) {
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.email = email;
-        this.puntosTotales = puntosTotales;
+        this.puntosTotales = 0;
         this.rango = rango;
-        this.sistemaPuntos=sistemaPuntos;
-        this.listaMonederos = new ArrayList<>();
-        this.notificador = notificador;
         this.saldo = saldo;
+        this.contrasena = contrasena;
     }
 
     public String getIdCliente() {
@@ -58,10 +53,6 @@ public class Cliente {
         this.puntosTotales = puntosTotales;
     }
 
-    public Notificable getNotificador() {return notificador;}
-
-    public void setNotificador(Notificable notificador) {this.notificador = notificador;}
-
     public RangoCliente getRango() {
         return rango;
     }
@@ -70,29 +61,36 @@ public class Cliente {
         this.rango = rango;
     }
 
-    public SistemaPuntos getSistemaPuntos() {
-        return sistemaPuntos;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setSistemaPuntos(SistemaPuntos sistemaPuntos) {
-        this.sistemaPuntos = sistemaPuntos;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
-    public List<Monedero> getListaMonederos() {
-        return listaMonederos;
+    public double getSaldo() {
+        return saldo;
     }
 
-    public void setListaMonederos(List<Monedero> listaMonederos) {
-        this.listaMonederos = listaMonederos;
-    }}
-
-
-
-
-    /* public void agregarMonedero(Monedero monedero) {
-        listaMonederos.add(monedero);
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "idCliente='" + idCliente + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", email='" + email + '\'' +
+                ", puntosTotales=" + puntosTotales +
+                ", rango=" + rango +
+                ", saldo=" + saldo +
+                ", contrasena='" + contrasena + '\'' +
+                '}';
+    }
+
+    /*
     public void realizarTransaccion(Transaccion transaccion) {
         transaccion.ejecutar();
         int puntosGanados = transaccion.calcularPuntos();
@@ -120,3 +118,4 @@ public class Cliente {
 
 }
 */
+}

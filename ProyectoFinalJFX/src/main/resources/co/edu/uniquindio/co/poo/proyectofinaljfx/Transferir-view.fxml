@@ -1,14 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<?import javafx.collections.FXCollections?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="co.edu.uniquindio.co.poo.proyectofinaljfx.Controller.DashboardUserController"
-            prefHeight="400.0" prefWidth="600.0">
+<?import java.lang.String?>
+<VBox xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.co.poo.proyectofinaljfx.Controller.TransferirController"
+      alignment="CENTER" spacing="20"
+      prefWidth="460" prefHeight="380"
+      style="-fx-padding:30; -fx-background-color:#f5f6fa;">
 
-</AnchorPane>
+    <children>
+
+        <!-- TÍTULO -->
+        <Label text="Transferir Dinero"
+               style="-fx-font-size:22px; -fx-font-weight:bold;" />
+
+        <!-- CUENTA DESTINO -->
+        <VBox spacing="6" prefWidth="300">
+            <children>
+                <Label text="Cuenta destino:" />
+                <TextField fx:id="txtCuentaDestino"
+                           promptText="Ingrese la cuenta destino"
+                           prefWidth="260" />
+            </children>
+        </VBox>
+
+        <!-- MONTO -->
+        <VBox spacing="6" prefWidth="300">
+            <children>
+                <Label text="Monto a transferir:" />
+                <TextField fx:id="txtMonto"
+                           promptText="Ingrese el monto"
+                           prefWidth="260" />
+            </children>
+        </VBox>
+
+        <!-- BOTONES -->
+        <HBox spacing="15" alignment="CENTER">
+            <children>
+                <Button fx:id="btnTransferir"
+                        text="Transferir"
+                        prefWidth="130"
+                        onAction="#onTransferir"
+                        style="-fx-background-color:#4a90e2; -fx-text-fill:white;" />
+
+                <Button fx:id="btnCancelar"
+                        text="Cancelar"
+                        prefWidth="130"
+                        onAction="#onCancelar" />
+            </children>
+        </HBox>
+
+        <!-- MENSAJE DE ERROR -->
+        <Label fx:id="lblError" textFill="red" />
+
+    </children>
+
+</VBox>
