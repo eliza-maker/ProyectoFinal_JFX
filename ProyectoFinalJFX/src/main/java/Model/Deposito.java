@@ -1,5 +1,6 @@
 package Model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Deposito extends Transaccion{
@@ -7,8 +8,8 @@ public class Deposito extends Transaccion{
         private double bonoPromocional;
         private String idConfirmacion;
 
-        public Deposito(String idTransaccion, double monto, Date fecha, String tipo, String medioDeposito, double bonoPromocional, String idConfirmacion) {
-            super(idTransaccion, fecha, monto, tipo);
+        public Deposito(String idTransaccion, double monto, LocalDate fecha, String medioDeposito, double bonoPromocional, String idConfirmacion,Cliente usuario) {
+            super(idTransaccion, fecha, monto, usuario);
             this.medioDeposito = medioDeposito;
             this.bonoPromocional = bonoPromocional;
             this.idConfirmacion = idConfirmacion;

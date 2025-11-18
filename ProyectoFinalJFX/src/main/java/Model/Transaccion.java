@@ -1,18 +1,19 @@
 package Model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public abstract class Transaccion {
-        protected String idTransaccion;
-        protected Date fecha;
-        protected double monto;
-        protected String tipo;
+        private String idTransaccion;
+        private LocalDate fecha;
+        private double monto;
+        private Cliente usuario;
 
-        public Transaccion(String idTransaccion, Date fecha, double monto, String tipo) {
+        public Transaccion(String idTransaccion, LocalDate fecha, double monto,Cliente usuario) {
             this.idTransaccion = idTransaccion;
             this.fecha = fecha;
             this.monto = monto;
-            this.tipo = tipo;
+            this.usuario=usuario;
         }
 
         public String getIdTransaccion() {
@@ -23,11 +24,11 @@ public abstract class Transaccion {
             this.idTransaccion = idTransaccion;
         }
 
-        public Date getFecha() {
+        public LocalDate getFecha() {
             return fecha;
         }
 
-        public void setFecha(Date fecha) {
+        public void setFecha(LocalDate fecha) {
             this.fecha = fecha;
         }
 
@@ -39,12 +40,13 @@ public abstract class Transaccion {
             this.monto = monto;
         }
 
-        public String getTipo() {
-            return tipo;
-        }
 
-        public void setTipo(String tipo) {
-            this.tipo = tipo;
-        }
+    public Cliente getUsuario() {
+        return usuario;
     }
+
+    public void setUsuario(Cliente usuario) {
+        this.usuario = usuario;
+    }
+}
 

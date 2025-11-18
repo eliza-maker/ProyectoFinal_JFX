@@ -31,6 +31,9 @@ public class DashboardUserController {
     private Label TxtRango;
 
     @FXML
+    private Label TxtNombreUsuario;
+
+    @FXML
     private Button BtnIformacionCuenta;
 
     @FXML
@@ -67,12 +70,20 @@ public class DashboardUserController {
     }
 
     @FXML
+    void onCerrarSesion() throws  IOException {
+        MonederoAplication.setCliente(null);
+        MonederoAplication.openLogin();
+    }
+
+    @FXML
     void initialize(){
         cambiarSaldo();
     }
 
     void cambiarSaldo(){
-        TxtSaldo.setText(1000 + "");
+        TxtSaldo.setText(MonederoAplication.getCliente().getSaldo()+"");
+        TxtRango.setText(MonederoAplication.getCliente().getRango()+"");
+        TxtNombreUsuario.setText(MonederoAplication.getCliente().getNombre());
     }
 
     public void enviarNotificacion() {
