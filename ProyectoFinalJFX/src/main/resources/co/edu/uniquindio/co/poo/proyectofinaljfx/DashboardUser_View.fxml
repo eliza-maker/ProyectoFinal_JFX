@@ -5,7 +5,7 @@
 
 <BorderPane prefHeight="500" prefWidth="800" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.co.poo.proyectofinaljfx.Controller.DashboardUserController">
 
-    <!-- Panel Izquierdo (Menú) -->
+    //Panel Izquierdo (Menú)
     <left>
         <VBox prefWidth="200" spacing="15" style="-fx-padding:20; -fx-background-color:#f5f6fa;">
             <children>
@@ -14,7 +14,6 @@
                 <Button fx:id="BtnRetirar" onAction="#onChangeRetirar" prefHeight="35" prefWidth="71.0" text="Retirar" />
                 <Button fx:id="BtnDepositar" onAction="#onChangeDepositar" prefHeight="35" prefWidth="71.0" text="Depositar" />
                 <Button fx:id="BtnTransferir" onAction="#onChangeTransferir" prefHeight="35" prefWidth="71.0" text="Transferir" />
-                <Button fx:id="BtnSMS" onAction="#onNotificar" prefHeight="35" prefWidth="71.0" text="SMS" />
                 <Button fx:id="BtnInfo" onAction="#onBeneficios" prefHeight="35" text="Beneficios" />
                 <Button fx:id="BtnHistorial" onAction="#onHistorial" prefHeight="35" prefWidth="71.0" text="Historial" />
 
@@ -23,7 +22,7 @@
         </VBox>
     </left>
 
-    <!-- Parte Superior -->
+    //Parte Superior
     <top>
         <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding:15; -fx-background-color:#dfe6f0;">
             <children>
@@ -38,7 +37,7 @@
                         <Label style="-fx-font-size:16px;" text="Usuario:" />
                         <Label fx:id="TxtNombreUsuario" style="-fx-font-size:16px; -fx-font-weight:bold;" text="Nombre Usuario" />
 
-                        <!-- BOTÓN PARA CERRAR SESIÓN -->
+                        //BOTÓN PARA CERRAR SESIÓN
                         <Button fx:id="BtnCerrarSesion" onAction="#onCerrarSesion" prefHeight="28" style="-fx-background-color:#e74c3c; -fx-text-fill:white;" text="Cerrar Sesión" />
 
                     </children>
