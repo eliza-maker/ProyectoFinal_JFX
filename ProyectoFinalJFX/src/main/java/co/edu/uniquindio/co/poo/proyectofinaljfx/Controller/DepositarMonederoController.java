@@ -1,20 +1,19 @@
 package co.edu.uniquindio.co.poo.proyectofinaljfx.Controller;
 
-import Model.Cliente;
-import Model.Deposito;
-import Model.Retiro;
-import Model.Transaccion;
+import Model.*;
 import co.edu.uniquindio.co.poo.proyectofinaljfx.MonederoAplication;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.Optional;
 import java.util.UUID;
 
-public class DepositarController {
-
+public class DepositarMonederoController {
     @FXML
     private TextField txtMonto;
 
@@ -24,7 +23,7 @@ public class DepositarController {
     @FXML
     void onDepositar() throws IOException {
         String texto = txtMonto.getText();
-        String metodo = comboMetodoDeposito.getValue();
+        String tipoMonedero = comboMetodoDeposito.getValue();
 
         try {
             double monto = Double.parseDouble(texto);
@@ -32,7 +31,7 @@ public class DepositarController {
             Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
             alerta.setTitle("Confirmar deposito");
             alerta.setHeaderText("¿Deseas continuar?");
-            alerta.setContentText("Desea generar el deposito a su cuenta por $"+monto);
+            alerta.setContentText("Desea generar el deposito a su "+tipoMonedero);
 
             ButtonType btnSi = new ButtonType("Sí");
             ButtonType btnNo = new ButtonType("No");
@@ -42,15 +41,30 @@ public class DepositarController {
             Optional<ButtonType> resultado = alerta.showAndWait();
 
             if (resultado.isPresent() && resultado.get() == btnSi) {
-
-                int puntos = (int) (monto / 100);
                 Cliente cliente = MonederoAplication.getCliente();
-                Transaccion deposito = new Deposito(UUID.randomUUID().toString(),monto, LocalDate.now(),metodo,0,"123",cliente);
 
-                MonederoAplication.empresa.agregarTransaccion(deposito);
-                cliente.setSaldo(cliente.getSaldo()+monto);
-                cliente.setPuntosTotales(cliente.getPuntosTotales()+puntos);
+                if (cliente.getSaldo() < monto) {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error de saldo");
+                    alert.setHeaderText("Monto insuficiente");
+                    alert.setContentText("Su saldo es insuficiente, saldo actual: "+cliente.getSaldo());
+                    alert.show();
+                    return;
+                }
 
+                Cuenta cuenta=MonederoAplication.empresa.getCuentaUser(MonederoAplication.getCliente());
+                Monedero monedero;
+                if (tipoMonedero.equals("Monedero Ahorro")) {
+                    monedero = cuenta.getMoneder("1");
+                }else {
+                    monedero = cuenta.getMoneder("2");
+                }
+
+                monedero.setSaldo(monedero.getSaldo()+monto);
+                cuenta.actualizarMonedero(monedero);
+                MonederoAplication.empresa.agregarCuenta(cuenta);
+
+                cliente.setSaldo(cliente.getSaldo()-monto);
                 MonederoAplication.empresa.actualizarCliente(cliente);
 
                 MonederoAplication.openDashboard();
@@ -64,23 +78,6 @@ public class DepositarController {
             alert.setContentText("Por favor ingrese un valor numérico válido.");
             alert.show();
 
-        }
-
-        Alert alerta3 = new Alert(Alert.AlertType.CONFIRMATION);
-        alerta3.setTitle("Notificacion de transaccion");
-        alerta3.setHeaderText("¿Desea ser notificado de su transacción?");
-        alerta3.setContentText("La notificacion llegara por SMS");
-
-
-        ButtonType btnSi2 = new ButtonType("Sí");
-        ButtonType btnNo2 = new ButtonType("No");
-
-        alerta3.getButtonTypes().setAll(btnSi2, btnNo2);
-
-        Optional<ButtonType> resultado3 = alerta3.showAndWait();
-
-        if (resultado3.isPresent() && resultado3.get() == btnSi2) {
-            MonederoAplication.changeScene("notificacion_view.fxml");
         }
     }
 

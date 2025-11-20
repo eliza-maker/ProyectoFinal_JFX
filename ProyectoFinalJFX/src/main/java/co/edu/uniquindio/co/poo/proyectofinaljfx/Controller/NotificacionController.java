@@ -1,5 +1,6 @@
 package co.edu.uniquindio.co.poo.proyectofinaljfx.Controller;
 
+import Model.Notificable;
 import co.edu.uniquindio.co.poo.proyectofinaljfx.MonederoAplication;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -8,7 +9,8 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-public class NotificacionController {
+public class NotificacionController implements Notificable {
+
     @FXML
     private TextField TxtNumero;
 
@@ -21,10 +23,6 @@ public class NotificacionController {
     @FXML
     private Label lblRequerirNumero;
 
-    @FXML
-    void onNotificar() {
-        onEnviarNotificacion();
-    }
 
     public void onEnviarNotificacion() {
         try {
@@ -43,7 +41,7 @@ public class NotificacionController {
 
     @FXML
     void onCancelar() throws IOException {
-        MonederoAplication.changeScene("Transferir-view.fxml");
+        MonederoAplication.changeScene("DashBoardUser_View.fxml");
     }
     }
 
