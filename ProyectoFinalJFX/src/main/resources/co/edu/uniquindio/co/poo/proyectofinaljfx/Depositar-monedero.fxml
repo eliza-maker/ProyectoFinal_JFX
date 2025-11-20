@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.FXCollections?>
+
+<?import java.lang.String?>
+<VBox xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.co.poo.proyectofinaljfx.Controller.DepositarMonederoController"
+      alignment="CENTER"
+      prefWidth="420" prefHeight="360"
+      spacing="20"
+      style="-fx-padding:30; -fx-background-color:#f5f6fa;">
+
+    <children>
+
+        <!-- Título -->
+        <Label text="Realizar Depósito a Monedero"
+               style="-fx-font-size:22px; -fx-font-weight:bold;" />
+
+        <!-- Campo para monto -->
+        <VBox spacing="8" prefWidth="260">
+            <children>
+                <Label text="Cantidad a depositar:" />
+                <TextField fx:id="txtMonto"
+                           promptText="Ingrese el monto a depositar" />
+            </children>
+        </VBox>
+
+        <VBox spacing="8" prefWidth="260">
+            <children>
+                <Label text="Monedero a depositar:" />
+                <ComboBox fx:id="comboMetodoDeposito"
+                          promptText="Seleccione el método">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Monedero Ahorro" />
+                            <String fx:value="Monedero Pagos" />
+
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </children>
+        </VBox>
+
+        <!-- Botones -->
+        <HBox spacing="15" alignment="CENTER">
+            <children>
+                <Button text="Confirmar"
+                        fx:id="btnDepositar"
+                        prefWidth="120"
+                        style="-fx-background-color:#2ecc71; -fx-text-fill:white;"
+                        onAction="#onDepositar" />
+
+                <Button text="Volver"
+                        prefWidth="120"
+                        onAction="#onVolver" />
+            </children>
+        </HBox>
+
+        <!-- Mensaje de error -->
+        <Label fx:id="lblError" textFill="red" />
+
+    </children>
+</VBox>

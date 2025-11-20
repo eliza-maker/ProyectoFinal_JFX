@@ -5,10 +5,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class DashboardUserController {
 
@@ -78,9 +81,37 @@ public class DashboardUserController {
     }
 
     @FXML
+    void onSetMonedero() throws IOException{
+        MonederoAplication.changeScene("Depositar-monedero.fxml");
+    }
+
+    @FXML
     void onCerrarSesion() throws  IOException {
         MonederoAplication.setCliente(null);
         MonederoAplication.openLogin();
+    }
+
+    @FXML
+    void onMonedero() throws IOException{
+        Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
+        alerta.setTitle("Selccion");
+        alerta.setHeaderText("Seleccione monedero");
+        alerta.setContentText("Elija el monedero al que desea direccionarse");
+
+        ButtonType btnSi = new ButtonType("Monedero de Ahorro");
+        ButtonType btnNo = new ButtonType("Monedero de Pagos");
+
+        alerta.getButtonTypes().setAll(btnSi, btnNo);
+
+        Optional<ButtonType> resultado = alerta.showAndWait();
+
+        if (resultado.isPresent() && resultado.get() == btnSi){
+            MonederoAplication.changeScene("Monedero-ahorro-view.fxml");
+            return;
+        }
+
+        MonederoAplication.changeScene("Monedero-pago-view.fxml");
+
     }
 
     @FXML

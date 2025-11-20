@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c6e26480-f4cc-411d-adbf-e73bf89b262a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Cuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/RangoCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/RangoCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/Controller/DashboardUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/Controller/DashboardUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/MonederoAplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/MonederoAplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/DashboardUser_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/DashboardUser_View.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Empresa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/DashboardUser_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/DashboardUser_View.fxml" afterDir="false" />
@@ -53,6 +60,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DepositarController.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Launcher.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MonederoAplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev__mel&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/cesar/Documentos/GitHub/ProyectoFinal_JFX&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Application.Launcher">
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.DepositarController.executor": "Run",
@@ -164,6 +191,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c6e26480-f4cc-411d-adbf-e73bf89b262a" name="Changes" comment="" />
@@ -173,6 +208,7 @@
       <updated>1762794299261</updated>
       <workItem from="1762794305407" duration="5796000" />
       <workItem from="1762894732626" duration="5673000" />
+      <workItem from="1763608474399" duration="6545000" />
     </task>
     <servers />
   </component>

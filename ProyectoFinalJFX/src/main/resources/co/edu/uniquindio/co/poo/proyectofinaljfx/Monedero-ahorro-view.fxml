@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="co.edu.uniquindio.co.poo.proyectofinaljfx.Controller.MonederoAhorroController">
+
+    <!--  CABECERA -->
+    <top>
+        <HBox alignment="CENTER_LEFT" style="-fx-background-color: #2C3E50;">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Button text="← Volver" onAction="#onVolver"
+                    style="-fx-background-color: transparent; -fx-text-fill:white; -fx-font-size:16px; -fx-font-weight:bold;"/>
+
+            <Label text="   Monedero de Ahorro"
+                   style="-fx-font-size: 22px; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+
+    <!-- CONTENIDO CENTRAL -->
+    <center>
+        <VBox spacing="25" alignment="CENTER">
+            <padding>
+                <Insets top="40" right="40" bottom="40" left="40"/>
+            </padding>
+
+            <!-- TÍTULO SALDO -->
+            <Label text="Saldo disponible:"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+            <!-- VALOR DEL SALDO -->
+            <Label fx:id="lblSaldo"
+                   style="-fx-font-size: 40px; -fx-text-fill: #27AE60; -fx-font-weight: bold;"/>
+
+           </VBox>
+    </center>
+
+</BorderPane>

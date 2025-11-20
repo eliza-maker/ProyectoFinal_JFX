@@ -60,6 +60,10 @@ public class MonederoAplication extends Application {
         Cliente c2 = new Cliente("2", "Eliza","Eliza@gmail.com", RangoCliente.BRONCE, 20000,"123");
         Cuenta cuenta1 = new Cuenta("1010",c);
         Cuenta cuenta2 = new Cuenta("2020",c2);
+        Monedero monedero1 = new MonederoAhorro("1",2000);
+        Monedero monedero2 = new MonederoAhorro("2",5000);
+        cuenta1.agregarMonedero(monedero1);
+        cuenta1.agregarMonedero(monedero2);
         empresa.agregarCliente(c);
         empresa.agregarCliente(c2);
         empresa.agregarCuenta(cuenta1);

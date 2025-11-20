@@ -11,11 +11,14 @@
             <children>
                 <Label style="-fx-font-size:16px; -fx-font-weight:bold;" text="Opciones" />
 
-                <Button fx:id="BtnRetirar" onAction="#onChangeRetirar" prefHeight="35" prefWidth="71.0" text="Retirar" />
-                <Button fx:id="BtnDepositar" onAction="#onChangeDepositar" prefHeight="35" prefWidth="71.0" text="Depositar" />
-                <Button fx:id="BtnTransferir" onAction="#onChangeTransferir" prefHeight="35" prefWidth="71.0" text="Transferir" />
-                <Button fx:id="BtnInfo" onAction="#onBeneficios" prefHeight="35" text="Beneficios" />
-                <Button fx:id="BtnHistorial" onAction="#onHistorial" prefHeight="35" prefWidth="71.0" text="Historial" />
+                <Button fx:id="BtnRetirar" onAction="#onChangeRetirar" prefHeight="35" prefWidth="135.0" text="Retirar" />
+                <Button fx:id="BtnDepositar" onAction="#onChangeDepositar" prefHeight="35" prefWidth="135.0" text="Depositar" />
+                <Button fx:id="BtnTransferir" onAction="#onChangeTransferir" prefHeight="35" prefWidth="135.0" text="Transferir" />
+                <Button fx:id="BtnSMS" onAction="#onNotificar" prefHeight="35" prefWidth="135.0" text="SMS" />
+                <Button fx:id="BtnInfo" onAction="#onBeneficios" prefHeight="35" prefWidth="135.0" text="Beneficios" />
+                <Button fx:id="BtnHistorial" onAction="#onHistorial" prefHeight="35" prefWidth="135.0" text="Historial" />
+                <Button fx:id="BtnMonedero" onAction="#onMonedero" prefHeight="35" prefWidth="135.0" text="Monederos" />
+                <Button fx:id="BtnDepositarMonederos" onAction="#onSetMonedero" prefHeight="35" prefWidth="135.0" text="Deposito Monederos" />
 
                 <Region VBox.vgrow="ALWAYS" />
             </children>
