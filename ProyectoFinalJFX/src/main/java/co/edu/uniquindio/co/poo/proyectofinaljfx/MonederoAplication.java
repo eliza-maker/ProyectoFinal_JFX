@@ -15,6 +15,7 @@ public class MonederoAplication extends Application {
     public static Empresa empresa;
     public static NotificacionSMS notificacion;
     public static Cliente cliente;
+    public static String monedero;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -62,8 +63,12 @@ public class MonederoAplication extends Application {
         Cuenta cuenta2 = new Cuenta("2020",c2);
         Monedero monedero1 = new MonederoAhorro("1",2000);
         Monedero monedero2 = new MonederoAhorro("2",5000);
+        Monedero monedero3 = new MonederoAhorro("1",200);
+        Monedero monedero4 = new MonederoAhorro("2",5000);
         cuenta1.agregarMonedero(monedero1);
         cuenta1.agregarMonedero(monedero2);
+        cuenta2.agregarMonedero(monedero3);
+        cuenta2.agregarMonedero(monedero4);
         empresa.agregarCliente(c);
         empresa.agregarCliente(c2);
         empresa.agregarCuenta(cuenta1);
@@ -76,5 +81,13 @@ public class MonederoAplication extends Application {
 
     public static void setCliente(Cliente cliente) {
         MonederoAplication.cliente = cliente;
+    }
+
+    public static String getMonedero() {
+        return monedero;
+    }
+
+    public static void setMonedero(String monedero) {
+        MonederoAplication.monedero = monedero;
     }
 }
