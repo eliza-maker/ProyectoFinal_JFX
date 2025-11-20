@@ -6,11 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c6e26480-f4cc-411d-adbf-e73bf89b262a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/Controller/DashboardUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/Controller/DashboardUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/Controller/TransferirController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/Controller/TransferirController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/DashboardUser_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/DashboardUser_View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/Transferir-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/Transferir-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/test/java/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,16 +66,19 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "dev__Isa",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/cesar/Documentos/GitHub/ProyectoFinal_JFX",
+    "last_opened_file_path": "/home/cesar/IdeaProjects/Seguimiento",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.EmpresaTest.agregarClienteTest">
+  <component name="RunManager" selected="Application.Launcher">
     <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.co.poo.proyectofinaljfx.Launcher" />
       <module name="ProyectoFinalJFX" />
@@ -156,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Launcher" />
         <item itemvalue="JUnit.EmpresaTest.agregarClienteTest" />
         <item itemvalue="JUnit.ClienteTest.calcularPuntosClienteTest" />
         <item itemvalue="JUnit.EmpresaTest.ActualizarClienteTest" />
         <item itemvalue="JUnit.EmpresaTest.LoginEmpresa" />
-        <item itemvalue="Application.Launcher" />
       </list>
     </recent_temporary>
   </component>

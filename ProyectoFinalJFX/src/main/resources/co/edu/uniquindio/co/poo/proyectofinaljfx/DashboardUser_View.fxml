@@ -10,7 +10,6 @@
         <VBox prefWidth="200" spacing="15" style="-fx-padding:20; -fx-background-color:#f5f6fa;">
             <children>
                 <Label style="-fx-font-size:16px; -fx-font-weight:bold;" text="Opciones" />
-
                 <Button fx:id="BtnRetirar" onAction="#onChangeRetirar" prefHeight="35" prefWidth="71.0" text="Retirar" />
                 <Button fx:id="BtnDepositar" onAction="#onChangeDepositar" prefHeight="35" prefWidth="71.0" text="Depositar" />
                 <Button fx:id="BtnTransferir" onAction="#onChangeTransferir" prefHeight="35" prefWidth="71.0" text="Transferir" />
