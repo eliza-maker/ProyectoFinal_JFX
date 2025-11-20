@@ -39,7 +39,7 @@
             </children>
         </VBox>
 
-        //BOTONES
+
         <HBox spacing="15" alignment="CENTER">
             <children>
                 <Button fx:id="btnTransferir"

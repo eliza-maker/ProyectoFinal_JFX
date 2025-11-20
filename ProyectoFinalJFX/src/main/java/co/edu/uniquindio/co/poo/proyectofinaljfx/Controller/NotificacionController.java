@@ -6,6 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+
 public class NotificacionController {
     @FXML
     private TextField TxtNumero;
@@ -21,10 +23,10 @@ public class NotificacionController {
 
     @FXML
     void onNotificar() {
-        enviarNotificacion();
+        onEnviarNotificacion();
     }
 
-    public void enviarNotificacion() {
+    public void onEnviarNotificacion() {
         try {
             String numero = TxtNumero.getText();
 
@@ -38,5 +40,10 @@ public class NotificacionController {
             e.printStackTrace();
         }
         }
+
+    @FXML
+    void onCancelar() throws IOException {
+        MonederoAplication.changeScene("Transferir-view.fxml");
+    }
     }
 

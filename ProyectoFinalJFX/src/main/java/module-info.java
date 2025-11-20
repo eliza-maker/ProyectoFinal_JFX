@@ -3,7 +3,6 @@ module co.edu.uniquindio.co.poo.proyectofinaljfx {
     requires javafx.fxml;
     requires javafx.graphics;
     requires okhttp3;
-    requires co.edu.uniquindio.co.poo.proyectofinaljfx;
 
     opens co.edu.uniquindio.co.poo.proyectofinaljfx to javafx.fxml;
     opens Model to javafx.base;

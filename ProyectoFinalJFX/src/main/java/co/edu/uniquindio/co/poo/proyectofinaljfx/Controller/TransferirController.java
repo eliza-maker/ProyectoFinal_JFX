@@ -128,7 +128,7 @@ public class TransferirController {
             Optional<ButtonType> resultado3 = alerta3.showAndWait();
 
             if (resultado3.isPresent() && resultado3.get() == btnSi2) {
-                MonederoAplication.changeScene("notificacion_View.fxml");
+                MonederoAplication.changeScene("notificacion_view.fxml");
             }
     }
 

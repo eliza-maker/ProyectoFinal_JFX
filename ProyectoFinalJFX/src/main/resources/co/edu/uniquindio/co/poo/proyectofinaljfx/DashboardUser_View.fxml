@@ -5,7 +5,7 @@
 
 <BorderPane prefHeight="500" prefWidth="800" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.co.poo.proyectofinaljfx.Controller.DashboardUserController">
 
-    //Panel Izquierdo (Menú)
+
     <left>
         <VBox prefWidth="200" spacing="15" style="-fx-padding:20; -fx-background-color:#f5f6fa;">
             <children>
@@ -21,7 +21,7 @@
         </VBox>
     </left>
 
-    //Parte Superior
+
     <top>
         <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding:15; -fx-background-color:#dfe6f0;">
             <children>
@@ -36,7 +36,7 @@
                         <Label style="-fx-font-size:16px;" text="Usuario:" />
                         <Label fx:id="TxtNombreUsuario" style="-fx-font-size:16px; -fx-font-weight:bold;" text="Nombre Usuario" />
 
-                        //BOTÓN PARA CERRAR SESIÓN
+
                         <Button fx:id="BtnCerrarSesion" onAction="#onCerrarSesion" prefHeight="28" style="-fx-background-color:#e74c3c; -fx-text-fill:white;" text="Cerrar Sesión" />
 
                     </children>
