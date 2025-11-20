@@ -39,7 +39,7 @@
             </children>
         </VBox>
 
-        <!-- BOTONES -->
+        //BOTONES
         <HBox spacing="15" alignment="CENTER">
             <children>
                 <Button fx:id="btnTransferir"
@@ -52,6 +52,7 @@
                         text="Cancelar"
                         prefWidth="130"
                         onAction="#onCancelar" />
+
             </children>
         </HBox>
 

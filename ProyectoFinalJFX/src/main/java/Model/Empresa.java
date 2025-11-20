@@ -22,7 +22,7 @@ public class Empresa {
                 return cliente;
             }
         }
-        return null;
+        throw new IllegalArgumentException("Credenciales incorrectas");
     }
 
     public void actualizarCliente(Cliente usuario){

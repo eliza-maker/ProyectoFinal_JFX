@@ -13,6 +13,11 @@
       <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/Controller/DashboardUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/Controller/DashboardUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/MonederoAplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/co/edu/uniquindio/co/poo/proyectofinaljfx/MonederoAplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/DashboardUser_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/DashboardUser_View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/java/Model/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/DashboardUser_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/DashboardUser_View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/Transferir-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoFinalJFX/src/main/resources/co/edu/uniquindio/co/poo/proyectofinaljfx/Transferir-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProyectoFinalJFX/src/test/java/AppTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +80,30 @@
   }
 }</component>
   <component name="RunManager" selected="Application.Launcher">
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DepositarController.executor": "Run",
+    "Application.Launcher.executor": "Run",
+    "Application.MonederoAplication.executor": "Run",
+    "JUnit.ClienteTest.calcularPuntosClienteTest.executor": "Run",
+    "JUnit.EmpresaTest.ActualizarClienteTest.executor": "Run",
+    "JUnit.EmpresaTest.LoginEmpresa.executor": "Run",
+    "JUnit.EmpresaTest.agregarClienteTest.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dev__Isa",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/cesar/Documentos/GitHub/ProyectoFinal_JFX",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.EmpresaTest.agregarClienteTest">
     <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.co.poo.proyectofinaljfx.Launcher" />
       <module name="ProyectoFinalJFX" />
@@ -88,23 +117,77 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MonederoAplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.co.poo.proyectofinaljfx.MonederoAplication" />
+    <configuration name="ClienteTest.calcularPuntosClienteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProyectoFinalJFX" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="co.edu.uniquindio.co.poo.proyectofinaljfx.*" />
+          <option name="PATTERN" value="model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.ClienteTest" />
+      <option name="METHOD_NAME" value="calcularPuntosClienteTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmpresaTest.ActualizarClienteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoFinalJFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.EmpresaTest" />
+      <option name="METHOD_NAME" value="ActualizarClienteTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmpresaTest.LoginEmpresa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoFinalJFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.EmpresaTest" />
+      <option name="METHOD_NAME" value="LoginEmpresa" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmpresaTest.agregarClienteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ProyectoFinalJFX" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="model" />
+      <option name="MAIN_CLASS_NAME" value="model.EmpresaTest" />
+      <option name="METHOD_NAME" value="agregarClienteTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmpresaTest.agregarClienteTest" />
+        <item itemvalue="JUnit.ClienteTest.calcularPuntosClienteTest" />
+        <item itemvalue="JUnit.EmpresaTest.ActualizarClienteTest" />
+        <item itemvalue="JUnit.EmpresaTest.LoginEmpresa" />
         <item itemvalue="Application.Launcher" />
-        <item itemvalue="Application.MonederoAplication" />
       </list>
     </recent_temporary>
   </component>
