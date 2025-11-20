@@ -25,9 +25,6 @@ public class DashboardUserController {
     private Button BtnTransferir;
 
     @FXML
-    private Button BtnSMS;
-
-    @FXML
     private Label TxtSaldo;
 
     @FXML
@@ -65,10 +62,7 @@ public class DashboardUserController {
         MonederoAplication.changeScene("Transferir-view.fxml");
     }
 
-    @FXML
-    void onNotificar(){
-        enviarNotificacion();
-    }
+
 
     @FXML
     void onHistorial()throws IOException{
@@ -126,17 +120,4 @@ public class DashboardUserController {
         TxtNombreUsuario.setText(MonederoAplication.getCliente().getNombre());
     }
 
-    public void enviarNotificacion() {
-        try {
-            String respuesta = MonederoAplication.notificacion.enviarSms(
-                    "573011281692",
-                    "Tu transacción se realizó correctamente"
-            );
-
-            System.out.println("Respuesta Infobip: " + respuesta);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }
