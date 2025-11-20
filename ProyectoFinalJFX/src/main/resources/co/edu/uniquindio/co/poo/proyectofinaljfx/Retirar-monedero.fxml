@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<VBox xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="co.edu.uniquindio.co.poo.proyectofinaljfx.Controller.RetirarMonederoController"
+      alignment="CENTER"
+      prefWidth="420" prefHeight="340"
+      spacing="20"
+      style="-fx-padding:30; -fx-background-color:#f5f6fa;">
+
+    <children>
+
+        <Label text="Realizar Retiro de monedero"
+               style="-fx-font-size:22px; -fx-font-weight:bold;" />
+
+        <!-- Campo para cantidad a retirar -->
+        <VBox spacing="8" prefWidth="260">
+            <children>
+                <Label text="Cantidad a retirar a cuenta principal:" />
+                <TextField fx:id="txtMonto"
+                           promptText="Ingrese el monto a retirar" />
+            </children>
+        </VBox>
+
+        <!-- Botones -->
+        <HBox spacing="15" alignment="CENTER">
+            <children>
+                <Button text="Confirmar"
+                        fx:id="btnRetirar"
+                        prefWidth="120"
+                        style="-fx-background-color:#4a90e2; -fx-text-fill:white;"
+                        onAction="#onRetirar" />
+
+                <Button text="Volver"
+                        prefWidth="120"
+                        onAction="#onVolver" />
+            </children>
+        </HBox>
+
+        <!-- Mensaje de error -->
+        <Label fx:id="lblError" textFill="red" />
+
+    </children>
+</VBox>

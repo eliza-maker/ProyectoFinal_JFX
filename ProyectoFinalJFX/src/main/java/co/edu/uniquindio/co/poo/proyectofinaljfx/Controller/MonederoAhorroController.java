@@ -16,6 +16,12 @@ public class MonederoAhorroController {
     }
 
     @FXML
+    void onRetirar()throws IOException{
+        MonederoAplication.setMonedero("ahorro");
+        MonederoAplication.changeScene("Retirar-monedero.fxml");
+    }
+
+    @FXML
     void initialize() {
         lblSaldo.setText(""+ MonederoAplication.empresa.getCuentaUser(MonederoAplication.getCliente()).getMoneder("1").getSaldo());
     }
