@@ -112,33 +112,4 @@ public class Cliente {
                 ", contrasena='" + contrasena + '\'' +
                 '}';
     }
-
-    /*
-    public void realizarTransaccion(Transaccion transaccion) {
-        transaccion.ejecutar();
-        int puntosGanados = transaccion.calcularPuntos();
-        sistemaPuntos.acumularPuntos(this, puntosGanados);
-    }
-
-    public double consultarSaldoTotal() {
-        double total = 0;
-        for (Monedero c : listaMonederos) {
-            total += c.getSaldo();
-        }
-        return total;
-    }
-
-    public void consultarHistorial() {
-        for (Monedero c : listaMonederos) {
-            c.mostrarHistorial();
-        }
-    }
-
-    public void canjearPuntos(Beneficio beneficio) {
-        sistemaPuntos.canjearPuntos(this, beneficio);
-    }
-
-
-}
-*/
 }
