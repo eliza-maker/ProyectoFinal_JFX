@@ -14,6 +14,28 @@ public class Cuenta {
         this.monederos = new ArrayList<>();
     }
 
+    public void actualizarMonedero(Monedero monedero){
+        for (int i = 0; i < monederos.size(); i++){
+            if(monederos.get(i).getIdMonedero().equals(monedero.getIdMonedero())){
+                monederos.set(i, monedero);
+                break;
+            }
+        }
+    }
+
+    public void agregarMonedero(Monedero monedero){
+        this.monederos.add(monedero);
+    }
+
+    public Monedero getMoneder(String idMonedero){
+        for (Monedero monedero : monederos){
+            if(monedero.getIdMonedero().equals(idMonedero)){
+                return monedero;
+            }
+        }
+        return null;
+    }
+
     public String getIdCuenta() {
         return idCuenta;
     }

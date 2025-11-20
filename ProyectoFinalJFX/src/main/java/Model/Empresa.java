@@ -55,6 +55,24 @@ public class Empresa {
         return null;
     }
 
+    public Cuenta getCuentaUser(Cliente cliente){
+        for (Cuenta cuenta : listaCuentas){
+            if(cuenta.getPropietario() == cliente){
+                return cuenta;
+            }
+        }
+        return null;
+    }
+
+    public void actualizarCuenta(Cuenta cuenta){
+        for (int i = 0; i < listaCuentas.size(); i++){
+            if(listaCuentas.get(i).getIdCuenta().equals(cuenta.getIdCuenta())){
+                listaCuentas.set(i, cuenta);
+                break;
+            }
+        }
+    }
+
     public String getNombre() {
         return nombre;
     }
