@@ -41,7 +41,7 @@ public class NotificacionController implements Notificable {
 
     @FXML
     void onCancelar() throws IOException {
-        MonederoAplication.changeScene("DashBoardUser_View.fxml");
+        MonederoAplication.openDashboard();
     }
     }
 

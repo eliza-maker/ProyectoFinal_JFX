@@ -87,6 +87,23 @@ public class RetirarController {
             alert.show();
 
         }
+
+        Alert alerta3 = new Alert(Alert.AlertType.CONFIRMATION);
+        alerta3.setTitle("Notificacion de transaccion");
+        alerta3.setHeaderText("¿Desea ser notificado de su transacción?");
+        alerta3.setContentText("La notificacion llegara por SMS");
+
+
+        ButtonType btnSi2 = new ButtonType("Sí");
+        ButtonType btnNo2 = new ButtonType("No");
+
+        alerta3.getButtonTypes().setAll(btnSi2, btnNo2);
+
+        Optional<ButtonType> resultado3 = alerta3.showAndWait();
+
+        if (resultado3.isPresent() && resultado3.get() == btnSi2) {
+            MonederoAplication.changeScene("notificacion_view.fxml");
+        }
     }
 
     @FXML
